@@ -1,0 +1,23 @@
+[run]
+source = bucketratelimiter
+branch = TRUE
+parallel = TRUE
+omit = tests/* , bucketratelimiter/version.py
+
+[report]
+show_missing = True
+exclude_lines =
+    # default
+    pragma: no cover
+    # python debug/internals
+    def __repr__
+    if __debug__:
+    assert
+    raise AssertionError
+    raise NotImplementedError
+    return NotImplemented
+    if __name__ == "__main__"
+    if __name__ == '__main__'
+    @overload
+    @abstractmethod
+    if TYPE_CHECKING
