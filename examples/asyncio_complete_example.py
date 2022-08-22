@@ -52,15 +52,22 @@ async def main_entry_point() -> None:
     for task in TASKS_TO_COMPLETE:
         await q.put(task)
 
+    tasks_to_cancel = []
     # use LIMITER as context manager to ensure its correct activation and end of work
     async with LIMITER:
         for w in [worker(q) for _ in range(1, WORKER_NUM + 1)]:
-            asyncio.create_task(w)
+            tasks_to_cancel.append(asyncio.ensure_future(w))
 
         await q.join()
+
+    [t.cancel() for t in tasks_to_cancel]  # cancel "daemon" tasks
 
 
 if __name__ == '__main__':
     start_t = time.monotonic()
-    asyncio.run(main_entry_point())
+    loop = asyncio.get_event_loop()
+    try:
+        loop.run_until_complete(main_entry_point())
+    finally:
+        loop.close()
     print(f"Time passed: {time.monotonic() - start_t}")
