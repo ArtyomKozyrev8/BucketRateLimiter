@@ -52,7 +52,7 @@ class AsyncioBucketTimeRateLimiter(BucketTimeRateLimiterABC, AsyncTimeRateLimite
     def activate(self) -> None:
         if self.reactivate_task is None:  # prevents creation of several activate tasks
             self.event_bucket_empty.set()  # set event flag that bucket is ready
-            self.reactivate_task = asyncio.create_task(self._reactivate_slots())
+            self.reactivate_task = asyncio.ensure_future(self._reactivate_slots())
 
     def deactivate(self) -> None:
         if self.reactivate_task is not None:

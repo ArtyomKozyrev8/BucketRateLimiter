@@ -57,7 +57,7 @@ async def main_entry_point(env_params: EnvironmentParams, broken_reactivate_task
         for w in [
             worker(q, some_func_to_limit, e.time_to_finish_one_task) for _ in range(e.workers_number)
         ]:
-            asyncio_tasks_to_cancel.append(asyncio.create_task(w))
+            asyncio_tasks_to_cancel.append(asyncio.ensure_future(w))
 
         await q.join()  # wait until all task in queue were done
         if broken_reactivate_task:
