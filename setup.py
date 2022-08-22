@@ -15,6 +15,7 @@ setup(
     author_email=module.author_email,
     license=module.package_license,
     description=module.package_info,
+    long_description_content_type="text/markdown",
     long_description=open("README.md").read(),
     platforms="all",
     packages=find_packages(exclude=["tests"]),
