@@ -1,4 +1,4 @@
-name: Perfrom unittests
+name: UNITTESTS
 
 on:
   push:
