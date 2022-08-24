@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/ArtyomKozyrev8/BucketRateLimiter/branch/main/graph/badge.svg?token=7LHFJ0UJYQ)](https://codecov.io/gh/ArtyomKozyrev8/BucketRateLimiter)
+
 # BucketRateLimiter
 
 **bucketratelimiter** is the collection of rate limiters, which are based on **Bucket** conception.
