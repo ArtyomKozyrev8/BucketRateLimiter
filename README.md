@@ -146,7 +146,7 @@ with limiter:
     limiter.wrap_operation(some_func_to_limit, sleep_time=1.0)
 ```
 
-### FOR CONTRIBUTORS
+### FOR CONTRIBUTORS:
 
 ```commandline
 mypy --strict bucketratelimiter
