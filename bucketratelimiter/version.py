@@ -6,4 +6,4 @@ author_email = "kozirev8@gmail.com"
 
 package_license = "GNU GENERAL PUBLIC LICENSE"
 
-package_info = "Collection of BucketRateLimiters. Allows to limit number of ops to the certain number"
+package_info = "Collection of BucketRateLimiters. Allows to limit number of ops to the certain number."
