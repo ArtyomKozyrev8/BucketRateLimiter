@@ -26,6 +26,6 @@ jobs:
           pip install .[develop]
       - name: Test with pytest
         run: |
-          pytest --durations=0 --cov=./
+          pytest --durations=0 --cov=bucketratelimiter
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
