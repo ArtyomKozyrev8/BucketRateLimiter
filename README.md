@@ -1,3 +1,5 @@
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![UNITTESTS](https://github.com/ArtyomKozyrev8/BucketRateLimiter/actions/workflows/unittests.yml/badge.svg)](https://github.com/ArtyomKozyrev8/BucketRateLimiter/actions/workflows/unittests.yml)
 [![codecov](https://codecov.io/gh/ArtyomKozyrev8/BucketRateLimiter/branch/main/graph/badge.svg?token=7LHFJ0UJYQ)](https://codecov.io/gh/ArtyomKozyrev8/BucketRateLimiter)
 
 # BucketRateLimiter
