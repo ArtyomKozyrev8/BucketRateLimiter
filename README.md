@@ -7,6 +7,11 @@
 
 **bucketratelimiter** is the collection of rate limiters, which are based on **Bucket** conception.
 
+
+### How to install:
+
+`pip install bucketratelimiter`
+
 ### Examples:
 
 You can find complete examples on how to use `AsyncioBucketTimeRateLimiter` and `MThreadedBucketTimeRateLimiter` in
@@ -152,6 +157,24 @@ with limiter:
 ```
 
 ### FOR CONTRIBUTORS:
+
+Clone the project:
+```commandline
+https://github.com/ArtyomKozyrev8/BucketRateLimiter.git
+cd BucketRateLimiter
+```
+Create a new virtualenv:
+```commandline
+python3 -m venv env
+source env/bin/activate
+```
+Install all requirements:
+```commandline
+pip install -e '.[develop]'
+```
+
+**Run Tests:**
+
 
 ```commandline
 mypy --strict bucketratelimiter
