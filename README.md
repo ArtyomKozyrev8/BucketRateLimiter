@@ -5,7 +5,11 @@
 
 # BucketRateLimiter
 
-**bucketratelimiter** is the collection of rate limiters, which are based on **Bucket** conception.
+**BucketRateLimiter** is the collection of rate limiters, which are based on **Bucket** conception.
+
+Rate Limiters are used when you want some function to be executed the concrete amount of times per time unit.
+The most widespread use case of Rate Limiters is when you use external APIs, e.g. website API. Some websites allows 
+to make only a limited number of requests per second and Rate Limiters solves the issue.
 
 
 ### How to install:
