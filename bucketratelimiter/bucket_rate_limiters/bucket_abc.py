@@ -18,7 +18,7 @@ class BucketTimeRateLimiterABC(ABC):
         :param max_size: max size of Bucket. Should be positive integer number.
         This is the maximum number of operations (e.g. requests) you can launch in the provided time
         interval (recovery_time).
-        e.g. API allows you to make 4 requests per second, hereby recovery_time = 4
+        e.g. API allows you to make 4 requests per second, hereby max_size = 4
         :param recovery_time: time in seconds to recover Bucket to full size.
         e.g. API allows to make 4 requests per second, hereby recovery_time = 1.0
         :param rest_time: time to give "workers" who use bucket to sleep if bucket is empty at the moment.
